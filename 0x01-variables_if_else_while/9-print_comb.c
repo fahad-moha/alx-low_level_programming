@@ -7,15 +7,18 @@
  */
 int main(void)
 {
-	int hex;
+	int i, j;
 
-	for (hex = 0; hex < 10; hex++)
+	for (i = 0; i < 10; i++)
 	{
-		putchar(hex);
-		if (hex != 57)
+		for (j = i; j < 10; j++)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar((i * 10) + j + '0');
+			if (j != 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
