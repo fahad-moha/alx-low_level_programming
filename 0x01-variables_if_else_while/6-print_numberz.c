@@ -7,13 +7,13 @@
  */
 int main(void)
 {
-	char nmber[10] = "0123456789";
-        int i;
+	char number[10] = "0123456789";
+	int i;
 
-        for (i = 0; i < 10; i++)
-        {
-                putchar( number[i]);
-        }
-        putchar("\n");
-        return (0);
+	for (i = 0; i < 10; i++)
+	{
+		putchar(number[i]);
+	}
+	putchar('\n');
+	return (0);
 }
