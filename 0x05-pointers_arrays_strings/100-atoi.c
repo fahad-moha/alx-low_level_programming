@@ -13,18 +13,18 @@ int _atoi(char *s)
 	int i = 0;
 
 	/*Skip over any non-numeric characters at the beginning of the string*/
-
-	while (s[i] && (s[i] < '0' || s[i] > '9'))
+	while (s[i])
 	{
-		/* Check for a minus sign*/
-
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			break;
+		}
 		if (s[i] == '-')
 		{
 			sign = -1;
 		}
 		i++;
 	}
-
 	/* Convert the number in the string to an integer*/
 
 	while (s[i] && s[i] >= '0' && s[i] <= '9')
