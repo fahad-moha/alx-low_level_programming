@@ -15,11 +15,13 @@ int _atoi(char *s)
 	/*Skip over any non-numeric characters at the beginning of the string*/
 	while (s[i])
 	{
-		if (s[i] == '-')
-			sign = -1;
 		if (s[i] >= '0' && s[i] <= '9')
 		{
 			break;
+		}
+		if (s[i] == '-')
+		{
+			sign = 0;
 		}
 		i++;
 	}
