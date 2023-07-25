@@ -19,10 +19,6 @@ int _atoi(char *s)
 		{
 			break;
 		}
-		if (s[i] == '-')
-		{
-			sign = -1;
-		}
 		i++;
 	}
 	/* Convert the number in the string to an integer*/
