@@ -10,18 +10,5 @@
   */
 void set_string(char **s, char *to)
 {
-	int i, len;
-
-	len = 0;
-	while (to[len] != '\0')
-	{
-		len++;
-	}
-	*s = (char *)malloc(sizeof(char) * (len + 1));
-
-	for (i = 0; i < len; i++)
-	{
-		(*s)[i] = to[i];
-	}
-	(*s)[i] = '\0';
+	*s = to;
 }
