@@ -21,6 +21,7 @@ int str_length(char *s)
 /**
   * is_palindrome_helper - to check if a string is a palindrome using recursion
   * @end: index end
+  * @s: ponter to an array
   * @start: index start
   * Return: 1, 0 or is_palindrome_helper(s, start + 1, end - 1)
   */
