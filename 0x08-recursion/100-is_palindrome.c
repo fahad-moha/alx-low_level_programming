@@ -1,28 +1,27 @@
 #include "main.h"
 
 /**
-  * str_length - Helper function to get the length of a string
-  * @s: pointer to an array
-  * Return: length of string
+  * str_length - Helper function to calculate
+  * the length of a string using recursion
+  * @s: a pointer to an array
+  * Return: 0 othewise 1 + str_length(s + 1)
   */
 int str_length(char *s)
 {
-	int length = 0;
-
-	while (*s != '\0')
+	if (*s == '\0')
 	{
-		length++;
-		s++;
+		return (0);
 	}
-	return (length);
+	else
+	{
+		return (1 + str_length(s + 1));
+	}
 }
 
 /**
-  * is_palindrome_helper - Helper function to check if
-  * a string is a palindrome using recursion
-  * @s: pointer to an array
-  * @start: star index
-  * @end: end index
+  * is_palindrome_helper - to check if a string is a palindrome using recursion
+  * @end: index end
+  * @start: index start
   * Return: 1, 0 or is_palindrome_helper(s, start + 1, end - 1)
   */
 int is_palindrome_helper(char *s, int start, int end)
@@ -42,8 +41,8 @@ int is_palindrome_helper(char *s, int start, int end)
 }
 
 /**
-  * is_palindrome - to check if a string is a palindrome
-  * @s: pointer to an array
+  * is_palindrome - to check if a string is a palindrome using recursion
+  * @s: a pointer to an array
   * Return: returns 1 if a string is a palindrome and 0 if not.
   */
 int is_palindrome(char *s)
