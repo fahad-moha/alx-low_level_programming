@@ -8,31 +8,36 @@
   * @argc: number of command-line arguments
   * Return: 1 or 0
   */
-
 int main(int argc, char *argv[])
 {
-	int cents, num_quarters, num_dimes, num_nickels,
-	    num_pennies, total_coins;
+	int num, j, result;
+	int coins[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	cents = atoi(argv[1]);
-	if (cents < 0)
+
+	num = atoi(argv[1]);
+	result = 0;
+
+	if (num < 0)
 	{
 		printf("0\n");
 		return (0);
 	}
-	num_quarters = cents / 25;
-	cents = cents % 25;
-	num_dimes = cents / 10;
-	cents = cents % 10;
-	num_nickels = cents / 5;
-	cents = cents % 5;
-	num_pennies = cents;
-	total_coins = num_quarters + num_dimes + num_nickels + num_pennies;
-	printf("%d\n", total_coins);
+
+	for (j = 0; j < 5 && num >= 0; j++)
+	{
+		while (num >= coins[j])
+		{
+			result++;
+			num -= coins[j];
+		}
+	}
+
+	printf("%d\n", result);
 	return (0);
 }
+
