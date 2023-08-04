@@ -1,0 +1,1 @@
+You can use the argc and argv parameters of the main function to access the arguments passed to your program. argc is an integer that represents the number of command-line arguments passed to the program, while argv is an array of strings that contains the actual arguments.
