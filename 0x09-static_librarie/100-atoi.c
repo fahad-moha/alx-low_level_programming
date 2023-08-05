@@ -42,3 +42,4 @@ int _atoi(char *s)
 	result *= sign;
 	return (result);
 }
+
