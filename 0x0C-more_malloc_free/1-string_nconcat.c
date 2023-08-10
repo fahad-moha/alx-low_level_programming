@@ -1,6 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
 
+/**
+  * *string_nconcat - concatenates two strings.
+  * @s2: string to concatenate from
+  * @s1: character to append to
+  * Return: null or otherwise a pointer
+  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int len1 = 0, len2 = 0, i, j;
