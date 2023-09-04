@@ -134,8 +134,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		print_error("Error: Invalid number of arguments. Usage:
-				cp <source> <destination>");
+		print_error("Error: Invalid number of arguments. Usage: cp <source> <destination>");
 		return (1);
 	}
 	source = argv[1];
